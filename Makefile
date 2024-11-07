@@ -36,11 +36,11 @@ PARSER_OBJS = $(patsubst parser/%.c,obj/parser/%.o,$(PARSER_SRCS))
 
 BUILTINS = $(addprefix builtins/,cd_pwd.c echo.c env.c exit.c export_utils.c export.c \
 unset.c update_cwd.c)
- 
+
 EXEC_SRS = $(addprefix execute/,exec.c streams.c ids.c execute_builtins.c \
 split_plist.c split_args.c check_cmds.c $(BUILTINS))
 EXEC_OBJS = $(patsubst execute/%.c,obj/execute/%.o,$(EXEC_SRS))
- 
+
 UTILS_SRCS = $(addprefix utils/,clear.c envcpy.c handle_signals.c getenvvar.c \
 getenvvar_utils.c std.c key_value.c error.c)
 UTILS_OBJS = $(patsubst utils/%.c,obj/utils/%.o,$(UTILS_SRCS))
